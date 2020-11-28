@@ -3,13 +3,14 @@ import emojipedia from "../emojipedia";
 import Heading from "./Heading";
 import Emoji from "./Emoji";
 
-function createEmoji(emojipedia){
-  return(
-    <Emoji 
-      emoji_img = {emojipedia.emoji}
-      name = {emojipedia.name}
-      desc = {emojipedia.meaning}
-      />
+function createEmoji(emojipedia) {
+  return (
+    <Emoji
+      key={emojipedia.id}
+      emoji_img={emojipedia.emoji}
+      name={emojipedia.name}
+      desc={emojipedia.meaning}
+    />
   );
 }
 

@@ -1,20 +1,15 @@
 import React from "react";
+import Title from "./Title";
+import Details from "./Details";
 
-function Emoji(props){
-  return(
+function Emoji(props) {
+  return (
     <dl className="dictionary">
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              {props.emoji_img}
-            </span>
-            <span>{props.name}</span>
-          </dt>
-          <dd>
-            {props.desc}
-          </dd>
-        </div>
-      </dl>
+      <div className="term">
+        <Title image={props.emoji_img} emoji_name={props.name} />
+        <Details emoji_desc={props.desc} />
+      </div>
+    </dl>
   );
 }
 
