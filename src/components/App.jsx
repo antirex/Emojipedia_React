@@ -4,18 +4,15 @@ import React, {useState} from "react";
 // import Emoji from "./Emoji";
 
 function App() {
-  const [count, setCount] = useState(0);
-  function incrementCount() {
-    setCount(count+1);
-  }
-  function decrementCount(){
-    setCount(count-1);
-  }
-  return (
+const [time, getTime] = useState("TIME");
+function showTime(){
+  var date = new Date().toLocaleTimeString();
+  getTime(date);
+}
+  return(
     <div className="container">
-      <h1>{count}</h1>
-      <button onClick={incrementCount}>+</button>
-      <button onClick={decrementCount}>-</button>
+      <h1>{time}</h1>
+      <button onClick={showTime}>Get time</button>
     </div>
   );
 }
