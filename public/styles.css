@@ -1,6 +1,6 @@
 /* simple to-do list - App2.jsx */
 body {
-  background-color: #ffeaa7;
+  background-color: #ffeeb6;
   min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
@@ -18,7 +18,7 @@ body {
   height: auto;
   min-height: 500px;
   max-width: 500px;
-  min-width: 250px;
+  min-width: 300px;
   background: #f1f5f8;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
   background-size: 25px 25px;
@@ -45,6 +45,7 @@ body {
   box-sizing: border-box;
   background-color: transparent;
   padding: 0.7rem;
+  outline: none;
   border-bottom-right-radius: 15px 3px;
   border-bottom-left-radius: 3px 15px;
   border: solid 3px transparent;
@@ -62,6 +63,7 @@ button {
   font-family: "Architects Daughter", cursive;
   text-decoration: none;
   padding-bottom: 3px;
+  outline: none;
   border-radius: 5px;
   background-color: #ffeaa7;
 }
