@@ -14,6 +14,13 @@ function App2() {
       setItem("");
     } else alert("Enter some text to add a task!");
   }
+  function deleteItem(id) {
+    setList((prevItem) => {
+      return prevItem.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
   return (
     <div className="container">
       <div className="heading">
@@ -32,8 +39,13 @@ function App2() {
       </div>
       <div>
         <ul>
-          {list.map((list) => (
-            <ToDoItem listItem={list} />
+          {list.map((list, index) => (
+            <ToDoItem
+              key={index}
+              id={index}
+              listItem={list}
+              onChecked={deleteItem}
+            />
           ))}
         </ul>
       </div>

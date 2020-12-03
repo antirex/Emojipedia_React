@@ -6,12 +6,15 @@ function ToDoItem(props) {
     setIsDone((prevValue) => !prevValue);
   }
   return (
-    <li
-      onClick={handleClick}
-      style={{ textDecoration: isDone ? "line-through" : "none" }}
+    <div
+      onClick={() => {
+        props.onChecked(props.id);
+      }}
     >
-      {props.listItem}
-    </li>
+      <li style={{ textDecoration: isDone ? "line-through" : "none" }}>
+        {props.listItem}
+      </li>
+    </div>
   );
 }
 
