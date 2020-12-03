@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ToDoItem from "./ToDoItem";
 
 function App2() {
   const [item, setItem] = useState();
@@ -11,7 +12,7 @@ function App2() {
     if (item) {
       setList((prevItem) => [...prevItem, item]);
       setItem("");
-    }else alert("Enter some text to add a task!")
+    } else alert("Enter some text to add a task!");
   }
   return (
     <div className="container">
@@ -32,7 +33,7 @@ function App2() {
       <div>
         <ul>
           {list.map((list) => (
-            <li>{list}</li>
+            <ToDoItem listItem={list} />
           ))}
         </ul>
       </div>
